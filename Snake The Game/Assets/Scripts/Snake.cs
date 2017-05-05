@@ -46,9 +46,17 @@ public class Snake : MonoBehaviour {
 		//Snake will move to a new direction
 		transform.Translate(dir);
 
+		if (ate)
+		{
+			GameObject g = (GameObject)Instantiate(tailPrefab, v, Quaternion.identity);
 
+			tail.Insert(0, g.transform);
 
-		if (tail.Count > 0)
+			ate = false;
+		
+		}
+
+		else if (tail.Count > 0)
 		{
 			tail.Last().position = v;
 
@@ -67,8 +75,12 @@ public class Snake : MonoBehaviour {
 		{
 			ate = true;
 
-			//Eliminate the food from display on collision
-			Destroy(coll.gameObject);
+			if (ate == true)
+			{
+				Destroy(coll.gameObject);
+			}
+
+
 		}
 		else
 		{

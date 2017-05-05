@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\GameLoad.cs" />
+     <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Snake.cs" />
      <Compile Include="Assets\Scripts\SpawnFood.cs" />
  <Reference Include="UnityEngine.UI">

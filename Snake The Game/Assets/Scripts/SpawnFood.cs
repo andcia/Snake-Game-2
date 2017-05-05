@@ -34,8 +34,8 @@ public class SpawnFood : MonoBehaviour {
 	// Use this for initialization
 	//The script will call for the Spawn function after some seconds by InvokeRepeating
 	void Start () {
-		//Food is spawned every 3 seconds starting from 2 seconds
-		InvokeRepeating("Spawn", 2, 3);
+		//Food is spawned every 4 seconds starting from 3 seconds
+		InvokeRepeating("Spawn", 3, 4);
 		
 	}
 	
